@@ -28,8 +28,9 @@ services:
         restart: always
     prestashop:
         image: prestashop/prestashop
-        ports:
-            - 80:80
+# Deshabilitamos los puertos ya que ahora van a depender del nuevo servicio
+        #ports:
+        #    - 80:80
         environment:
             - DB_SERVER=${DB_SERVER}
         volumes:
